@@ -15,9 +15,6 @@ public class ProfessorService {
     @Autowired
     ProfessorRepository professorRepository;
 
-    @Autowired
-    MatriculaRepository matriculaRepository;
-
     public List<ProfessorModel> listar(){
         return professorRepository.findAll();
     }
@@ -31,7 +28,6 @@ public class ProfessorService {
     }
 
     public void excluir(Long id){
-
         professorRepository.deleteById(id);
     }
 }
